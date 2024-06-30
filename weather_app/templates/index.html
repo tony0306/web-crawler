@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>天氣數據展示</title>
+    <style>
+        .data { 
+            width: 100%; 
+            border-collapse: collapse; 
+        }
+        .data th, .data td { 
+            border: 1px solid black; 
+            padding: 8px; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ city }}的天氣數據</h1>
+    {% for table in tables %}
+        {{ table | safe }}
+    {% endfor %}
+</body>
+</html>
+
